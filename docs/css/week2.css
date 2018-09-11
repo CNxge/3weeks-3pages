@@ -68,35 +68,13 @@ th, td /* table elements 表格元素 */ {
     font-size: 10px;
 }
 
-.customLargeFont {
-    font-size: 20px; color: #08aa94;
-}
-
 .customSmallFont {
     font-size: 10px; color: #08aa94; font-style: italic; font-weight: bold;
-}
-
-.content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .logo {
     width: 100px;
     height: 100px;
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-
-.menuItem {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
 }
 
 .menuItemLi {
@@ -117,6 +95,51 @@ th, td /* table elements 表格元素 */ {
     flex-direction: column;
 }
 
+.mainItem {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 20%;
+}
+
+
+.cols1 {width: 8.33%}
+.cols2 {width: 16.66%}
+.cols3 {width: 24.99%}
+.cols4 {width: 33.32%}
+.cols5 {width: 41.65%}
+.cols6 {width: 49.98%}
+.cols7 {width: 58.31%}
+.cols8 {width: 66.64%}
+.cols9 {width: 74.97%}
+.cols10 {width: 83.30%}
+.cols11 {width: 91.63%}
+.cols12 {width: 100%}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.menuItem {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
 .scrollItem {
     display: flex;
     flex-direction: column;
@@ -126,25 +149,70 @@ th, td /* table elements 表格元素 */ {
     align-items: center;
     height: 80px;
 }
-
-.mainItem {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    width: 20%;
+.customLargeFont {
+    font-size: 20px; color: #08aa94;
 }
+@media screen and (max-width: 800px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 150px;
+    }
+    .contacts {
+        visibility: hidden;
+        height: 0px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+    }
+    .menuItem {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0px;
+    }
+    .liItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .customMargin {
+        margin-top: 0px;
+    }
+    .scrollItem {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        background-color: #eff8f7;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }
+    .hiddenBlock {
+        visibility: hidden;
+        height: 0px;
+    }
+    .customLargeFont {
+        font-size: 10px; color: #08aa94; text-align: center; vertical-align: middle; margin-top: 20px;
+    }
+    .center {
+        text-align: center;
+    }
+    .menuItemLi {
+        text-align: center; display: inline-block; font-size: 16px; color: #08aa94; font-style: italic; font-weight: bold;
+    }
+    ul {
+        list-style: none;
+        line-height: 40px;
+        margin-left: 50px;
+    }
 
-@media screen and (min-width: 500px) {
-    .cols1 {width: 8.33%}
-    .cols2 {width: 16.66%}
-    .cols3 {width: 24.99%}
-    .cols4 {width: 33.32%}
-    .cols5 {width: 41.65%}
-    .cols6 {width: 49.98%}
-    .cols7 {width: 58.31%}
-    .cols8 {width: 66.64%}
-    .cols9 {width: 74.97%}
-    .cols10 {width: 83.30%}
-    .cols11 {width: 91.63%}
-    .cols12 {width: 100%}
+    li {
+        display: block;
+        float: left;
+    }
+
 }
